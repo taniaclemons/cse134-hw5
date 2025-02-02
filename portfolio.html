@@ -5,6 +5,37 @@
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio</title>
+    <style>
+      no-proj-alert {
+        display: block;
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid black;
+        font-size: 1rem;
+        background-color: #f9e1e1;
+        text-align: center;
+      }
+      no-proj-alert blockquote {
+        font-style: italic;
+        fontsize: 18px;
+        border-left: 5px solid black;
+      }
+      no-proj-alert ul li {
+      display: inline-block;
+      margin: 5px 10px;
+      }
+      no-proj-alert .button {
+        background-color: #f9e1e1;
+        color: black;
+        border: 1px solid #04AA6D;
+        text-decoration: none;
+        padding: 10px 20px;
+      }
+      no-proj-alert .button:hover {
+        background-color: #04AA6D;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -20,7 +51,17 @@
     </header>
     <section>
       <h1>Portfolio</h1>
-      <p>TBC</p>
+      <no-proj-alert>
+        <h3>Uh Oh</h3>
+        <p>There are no projects currently available</p>
+        <blockquote>"What else was there to do? Keep moving and improving."</blockquote>
+        <p>- Mirna Valerio, <cite>A Beautiful Work in Progress</cite></p>
+        <p>Would you like to:</p>
+        <ul>
+          <li><a href="prog.html" class="button">Go to In Progress</a></li>
+          <li><a href="portfolio.html" class="button">Stay on this page</a></li>
+        </ul>
+      </no-proj-alert>
     </section>
     <footer>
       <p>Last Updated: 2025</p>
