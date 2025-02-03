@@ -1,7 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FILLINLATER</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0"/>
+    <title>Experiments</title>
+    <link rel="preload" href="media/your-gif-name.gif" as="image">
   </head>
+  <body>
+    <section>
+      <h1>Code tag</h1>
+      <p>The HTML <code>button</code> doesn't currently work for my website</p>
+      <h1>Dialog tag</h1>
+      <dialog open>This is dialogue</dialog>
+      <h1>Address tag</h1>
+      <address>Imaginary Address at Imaginary location</address>
+      <h1>DFN tag</h1>
+      <p><dfn>Niche</dfn> is a position in life that suits ones needs of comfort of preference.</p>
+      <h1>KBD tag</h1>
+      <p><kbd>CTRL</kbd> + <kbd>C</kbd> & <kbd>CTRL</kbd> + <kbd>V</kbd> is copy & paste</p>
+      <h1>INS & DEL tag</h1>
+      <p>This is the <del>delete</del> <ins>insert</ins> tag!</p>
+      <h1>Strong & EM tag</h1>
+      <p>This is the <strong>strong</strong> tag & this is the <em>emphasize</em> tag</p>
+      <h1>PRE tag</h1>
+      <pre>This is 
+         preformatted text     .</pre>
+      <h1>Aside tag</h1>
+      <p>I ate an apple this morning</p>
+      <aside>
+        <p>An apple is a delicious fruit</p>
+      </aside>
+      <h1>Span tag</h1>
+      <p>This could be used to mark up a <span>part</span> of a text</p>
+      <h1>Template tag</h1>
+      <template>
+        <p>This is an example for template and text therefore won't be rendered until implemented</p>
+      </template>
+    </section>
+    <h1>iFrame tag</h1>
+    <iframe src="https://www.youtube.com" title="Youtube">
+    </iframe>
+    <h1>Audio tag</h1>
+    <audio controls>
+      <source src="stillwithyou.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+    <h1>Video tag</h1>
+    <video width="320" height="240" controls>
+      <source src="media/movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h1>SVG tag</h1>
+    <svg width="100" height="100">
+      <rect width="100" height="100"/>
+      Sorry, your browser does not support inline SVG.
+    </svg>
+    <h1>Optgroup, Option, Select tags</h1>
+    <form>
+      <label for="pets">Cats or Dogs?</label>
+      <select name="pets" id="pets">
+        <optgroup label="pets">
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+        </optgroup>
+      </select>
+    </form>
+    <h1>Datalist tag</h1>
+    <form method="get">
+      <label for="pets">Cats or Dogs?</label>
+      <input list="pets" name="pets" id="pets">
+      <datalist label="pets">
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+      </datalist>
+      <input type="submit">
+    </form>
+    <h1>Summary & Details tag</h1>
+    <details>
+      <summary>This is the main things</summary>
+      <p>BLAH BLAH BLAH DETAILS</p>
+    </details>
+    <h1>Table, tr, td, th, Caption, Colgroup, Col tags</h1>
+    <table>
+      <caption>Number of people with pets & siblings</caption>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <tr>
+        <th>Pet</th>
+        <th>Siblings</th>
+        <th>No Siblings</th>
+      </tr>
+      <tr>
+        <td>Cat</td>
+        <td>4</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Dog</td>
+        <td>9</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>None</td>
+        <td>2</td>
+        <td>6</td>
+    </table>
+    <h1>Figure & Figcaption tags</h1>
+    <figure>
+      <img src="media/homeworkstudyingGIFbyPusheen.gif" alt="Cat typing gif">
+      <figcaption>Fig.1 - A cat, typing.</figcaption>
+    </figure>
+    <dl>
+      <dt>Cat</dt>
+      <dd>A cute fluffy animal</dd>
+      <dt>Dog</dt>
+      <dd>Another cute fluffy animal</dd>
+    </dl>
+  </body>
+</html>
