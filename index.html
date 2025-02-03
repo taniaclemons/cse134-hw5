@@ -19,9 +19,23 @@
         </ul>
       </nav>
     </header>
+    <div>
+      <greetings></greetings>
+    <script>
+        class Greetings extends HTMLElement {
+            constructor() {
+                super(); 
+            }
+            connectedCallback() {
+                console.log('Welcome to my website!');
+            }
+        }
+        customElements.define('greetings', Greetings);
+    </script>
+    </div>
     <section>
       <h1>I am Tania Clemons</h1>
-      <p>I am currently a third year computer science major studying at UCSD...<a href="about.html">Read more here</a></p>
+      <p>I am currently a third year computer science major studying at <abbr title="University of California, San Diego">UCSD</abbr>...<a href="about.html">Read more here</a></p>
     </section>
     <footer>
       <p>Last Updated: 2025</p>
