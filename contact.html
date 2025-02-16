@@ -5,6 +5,40 @@
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0"/>
     <title>Contact Me</title>
+    <style>
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+      }
+      nav ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+      nav a.active {
+        color: grey;
+        font-weight:bold;
+      }
+      nav a:hover {
+        color: #ff6347;
+      }
+      section {
+        text-align: center;
+        padding: 2rem;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -14,7 +48,7 @@
           <li><a href="about.html">About Me</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="prog.html">In Progress</a></li>
-          <li><a href="contact.html">Contact Me</a></li>
+          <li><a href="contact.html" class="active">Contact Me</a></li>
         </ul>
       </nav>
     </header>
