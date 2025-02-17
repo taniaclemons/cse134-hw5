@@ -19,6 +19,10 @@
         background-color: #333;
         color: white;
         padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
       }
       nav ul {
         display: flex;
@@ -30,6 +34,8 @@
         text-decoration: none;
         color: white;
         font-weight: bold;
+        font-size: 1rem;
+        padding: 10px 15px;
       }
       nav a.active {
         color: grey;
@@ -41,6 +47,18 @@
       section {
         text-align: center;
         padding: 2rem;
+      }
+      p {
+        text-align: center;
+      }
+      input {
+        padding: 0.8rem;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 1rem;
+        border: 2px solid #333;
+        border-radius: 5px;
+        font-size: 1rem;
       }
       no-proj-alert {
         display: block;
@@ -78,6 +96,16 @@
       no-proj-alert .button:hover {
         background-color: #04AA6D;
         color: white;
+      }
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        nav a {
+          font-size: 1.2rem;
+          padding: 15px 20px;
+        }
       }
     </style>
   </head>
