@@ -56,6 +56,8 @@
         width: 100%;
         max-width: 400px;
         margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
         border: 2px solid #333;
         border-radius: 5px;
         font-size: 1rem;
@@ -68,13 +70,14 @@
         font-size: 1rem;
         background-color: #f9e1e1;
         text-align: center;
-        position: fixed; /* Positioned fixed on the screen */
+        /*position: fixed; 
         top: 20px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%);*/
+        margin: 40px auto;
         width: 90%;
         max-width: 400px;
-        z-index: 1000; /* Makes sure it's on top */
+        z-index: 1000; 
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
       no-proj-alert blockquote {
@@ -105,6 +108,13 @@
         nav a {
           font-size: 1.2rem;
           padding: 15px 20px;
+        }
+        no-proj-alert ul {
+          flex-direction: row;
+          justify-content: center;
+        }
+        no-proj-alert .button {
+          margin: 5px;
         }
       }
     </style>
