@@ -88,28 +88,31 @@
     </header>
     <section>
       <h1>Contact Me</h1>
-      <form>
+      <form action="https://httpbin.org/post" method="POST">
         <fieldset>
           <legend>Your Info</legend>
           <label for="fname">First Name:</label>
-          <input type="text" id="fname" name="fname">
+          <input type="text" id="fname" name="fname" required>
           <br>
           <br>
           <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lname">
+          <input type="text" id="lname" name="lname" required>
           <br>
           <br>
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
+          <input type="email" id="email" name="email" required>
           <br>
           <br>
           <label for="message">Message:</label>
-          <textarea id="message" name="message">Write Here</textarea>
+          <textarea id="message" name="message" required>Write Here</textarea>
           <br>
           <br>
+          <input type="hidden" name="possible_bot" value="true">
           <button type="submit">Send</button>
         </fieldset>
       </form>
+      <output id="error-message"></output>
+      <ouput id="info-message"></ouput>
     </section>
     <footer>
       <p>Last Updated: 2025</p>
