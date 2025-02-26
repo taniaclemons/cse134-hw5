@@ -141,10 +141,10 @@
 
         // Check the current theme and change the button text accordingly
         if (document.body.classList.contains('dark-mode')) {
-          document.getElementById('theme-toggle').textContent = 'Switch to Light Mode';
+          document.getElementById('theme').textContent = 'Switch to Light Mode';
           localStorage.setItem('theme', 'dark'); // Save dark mode preference
         } else {
-          document.getElementById('theme-toggle').textContent = 'Switch to Dark Mode';
+          document.getElementById('theme').textContent = 'Switch to Dark Mode';
           localStorage.setItem('theme', 'light'); // Save light mode preference
         }
       }
@@ -155,7 +155,7 @@
         
         if (savedTheme === 'dark') {
           document.body.classList.add('dark-mode');
-          document.getElementById('theme-toggle').textContent = 'Switch to Light Mode';
+          document.getElementById('theme').textContent = 'Switch to Light Mode';
         }
       };
     </script>
