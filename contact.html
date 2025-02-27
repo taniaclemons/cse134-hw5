@@ -52,6 +52,7 @@
         background-color: #ff6347;
         color: white;
         border: none;
+        max-width: auto;
       }
       form {
         display: flex;
@@ -140,26 +141,26 @@
         
         let fn = document.forms["cForm"]["fname"].value;
         if(fn == "") {
-          eMessage.textContent += 'Invalid first name';
+          eMessage.textContent += 'Invalid first name. ';
           v = false;
         }
 
         let ln = document.forms["cForm"]["lname"].value;
         if(ln == "") {
-          eMessage.textContent += 'Invalid last name';
+          eMessage.textContent += 'Invalid last name. ';
           v = false;
         }
 
         let e = document.forms["cForm"]["email"].value;
         const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if(e == "" || !pattern.test(e)) {
-          eMessage.textContent += 'Invalid email';
+          eMessage.textContent += 'Invalid email. ';
           v = false;
         }
 
         let m = document.forms["cForm"]["message"].value;
         if(m == "") {
-          eMessage.textContent += 'Message required';
+          eMessage.textContent += 'Message required.';
           v = false;
         }
 
