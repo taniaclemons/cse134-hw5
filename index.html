@@ -136,7 +136,8 @@
       <p>Last Updated: 2025</p>
     </footer>
     <script>
-      window.onload = function() {savedTheme()};
+      //window.onload = function() {savedTheme()};
+      window.addEventListener('load', savedTheme);
       
       function savedTheme() {
         const savedTheme = localStorage.getItem('theme') || 'light-mode';
