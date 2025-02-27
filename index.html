@@ -95,7 +95,7 @@
       }
     </style>
   </head>
-  <body onload="toggleTheme()">
+  <body onload="savedTheme()">
     <header>
       <button id="theme" onclick="toggleTheme()">Dark Mode</button>
       <nav>
@@ -136,6 +136,11 @@
       <p>Last Updated: 2025</p>
     </footer>
     <script>
+      function savedTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'light-mode';
+        setTheme(savedTheme);
+      }
+      
       function setTheme(theme) {
         var element = document.body;
         element.classList.toggle('dark-mode', theme == 'dark-mode');
