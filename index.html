@@ -95,9 +95,9 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="toggleTheme()">
     <header>
-      <button id="theme" onclick="theme()">Dark Mode</button>
+      <button id="theme" onclick="toggleTheme()">Dark Mode</button>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -136,11 +136,11 @@
       <p>Last Updated: 2025</p>
     </footer>
     <script>
-      function theme() {
+      function setTheme(theme) {
         var element = document.body;
         element.classList.toggle('dark-mode');
 
-        if (element.classList.contains('dark-mode')) {
+        if (theme == 'dark-mode') {
           document.getElementById('theme').textContent = 'Light Mode';
           localStorage.setItem('theme', 'dark');
         } else {
@@ -149,14 +149,18 @@
         }
       }
       
-      window.onload = function() {
-        const savedTheme = localStorage.getItem('theme');
+      function toggleTheme() {
+        const currTheme = localStorage.getItem('theme') || 'light-mode';
+        const newTheme = currTheme == 'light-mode'? 'dark-mode': 'light-mode';
+        localStorage.setItem('theme', newTheme);
+        setTheme(newTheme);
+        //document.getElementById('theme').textContent = 'Light Mode';
         
-        if (savedTheme === 'dark') {
-          element.classList.add('dark-mode');
-          document.getElementById('theme').textContent = 'Light Mode';
-        }
-      };
+        //if (savedTheme === 'dark') {
+          //element.classList.add('dark-mode');
+          //document.getElementById('theme').textContent = 'Light Mode';
+        //}
+      }
     </script>
   </body>
 </html>
