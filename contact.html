@@ -137,27 +137,27 @@
         const iMessage = document.getElementById('info-message');
         let v = true;
         
-        let fn = document.forms["cForm"]["fname"].value;
-        if(fn == "") {
+        let fn = document.forms["cForm"]["fname"];
+        if(fn.value == "") {
           fn.setCustomValidity('Invalid first name.');
           v = false;
         }
 
-        let ln = document.forms["cForm"]["lname"].value;
-        if(ln == "") {
+        let ln = document.forms["cForm"]["lname"];
+        if(ln.value == "") {
           ln.setCustomValidity('Invalid last name.');
           v = false;
         }
 
-        let e = document.forms["cForm"]["email"].value;
+        let e = document.forms["cForm"]["email"];
         const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if(e == "" || !pattern.test(e)) {
+        if(e.value == "" || !pattern.test(e)) {
           e.setCustomValidity('Invalid email.');
           v = false;
         }
 
-        let m = document.forms["cForm"]["message"].value;
-        if(m == "") {
+        let m = document.forms["cForm"]["message"];
+        if(m.value == "") {
           m.setCustomValidity('Message required.');
           v = false;
         }
