@@ -137,7 +137,8 @@
     </footer>
     <script>
       //window.onload = function() {savedTheme()};
-      window.addEventListener('load', savedTheme);
+      //window.addEventListener('load', savedTheme);
+      window.addEventListener('DOMContentLoaded', savedTheme);
       
       function savedTheme() {
         const savedTheme = localStorage.getItem('theme') || 'light-mode';
