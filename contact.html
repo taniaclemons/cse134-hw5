@@ -139,26 +139,26 @@
         
         let fn = document.forms["cForm"]["fname"].value;
         if(fn == "") {
-          eMessage.textContent += 'Invalid first name. ';
+          eMessage.setCustomValidity('Invalid first name.');
           v = false;
         }
 
         let ln = document.forms["cForm"]["lname"].value;
         if(ln == "") {
-          eMessage.textContent += 'Invalid last name. ';
+          eMessage.setCustomValidity('Invalid last name.');
           v = false;
         }
 
         let e = document.forms["cForm"]["email"].value;
         const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if(e == "" || !pattern.test(e)) {
-          eMessage.textContent += 'Invalid email. ';
+          eMessage.setCustomValidity('Invalid email.');
           v = false;
         }
 
         let m = document.forms["cForm"]["message"].value;
         if(m == "") {
-          eMessage.textContent += 'Message required.';
+          eMessage.setCustomValidity'Message required.');
           v = false;
         }
 
