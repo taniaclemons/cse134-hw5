@@ -138,15 +138,16 @@
     <script>
       function setTheme(theme) {
         var element = document.body;
-        element.classList.toggle('dark-mode');
+        element.classList.toggle('dark-mode', theme == 'dark-mode');
+        document.getElementById('theme').textContent = theme === 'dark-mode' ? 'Light Mode' : 'Dark Mode';
 
-        if (theme == 'dark-mode') {
-          document.getElementById('theme').textContent = 'Light Mode';
-          localStorage.setItem('theme', 'dark-mode');
-        } else {
-          document.getElementById('theme').textContent = 'Dark Mode';
-          localStorage.setItem('theme', 'light-mode');
-        }
+        //if (theme == 'dark-mode') {
+        //  document.getElementById('theme').textContent = 'Light Mode';
+        //  localStorage.setItem('theme', 'dark-mode');
+        //} else {
+        //  document.getElementById('theme').textContent = 'Dark Mode';
+        //  localStorage.setItem('theme', 'light-mode');
+        //}
       }
       
       function toggleTheme() {
