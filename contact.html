@@ -139,33 +139,34 @@
         
         let fn = document.forms["cForm"]["fname"].value;
         if(fn == "") {
-          eMessage.setCustomValidity('Invalid first name.');
+          fn.setCustomValidity('Invalid first name.');
           v = false;
         }
 
         let ln = document.forms["cForm"]["lname"].value;
         if(ln == "") {
-          eMessage.setCustomValidity('Invalid last name.');
+          ln.setCustomValidity('Invalid last name.');
           v = false;
         }
 
         let e = document.forms["cForm"]["email"].value;
         const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if(e == "" || !pattern.test(e)) {
-          eMessage.setCustomValidity('Invalid email.');
+          e.setCustomValidity('Invalid email.');
           v = false;
         }
 
         let m = document.forms["cForm"]["message"].value;
         if(m == "") {
-          eMessage.setCustomValidity'Message required.');
+          m.setCustomValidity('Message required.');
           v = false;
         }
 
         if(v == true) {
           iMessage.textContent = 'Successfully submitted';
+        } else {
+          eMessage.textContent = 'Failed to submit';
         }
-        return v;
       }
     </script>
   </body>
