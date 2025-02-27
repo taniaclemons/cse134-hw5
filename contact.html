@@ -106,28 +106,25 @@
     </header>
     <section>
       <h1>Contact Me</h1>
-      <form action="https://httpbin.org/post" method="POST">
-        <fieldset>
-          <legend>Your Info</legend>
-          <label for="fname">First Name:</label>
-          <input type="text" id="fname" name="fname" required>
-          <br>
-          <br>
-          <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lname" required>
-          <br>
-          <br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <br>
-          <br>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required>Write Here</textarea>
-          <br>
-          <br>
-          <input type="hidden" name="possible_bot" value="true">
-          <button type="submit">Send</button>
-        </fieldset>
+      <form name="cForm" action="https://httpbin.org/post" onsubmit="return formCheck()" method="post">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+        <br>
+        <br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required>Write Here</textarea>
+        <br>
+        <br>
+        <input type="hidden" name="possible_bot" value="true">
+        <button type="submit">Send</button>
       </form>
       <output id="error-message"></output>
       <ouput id="info-message"></ouput>
@@ -135,5 +132,41 @@
     <footer>
       <p>Last Updated: 2025</p>
     </footer>
+    <script>
+      function formCheck() {
+        const eMessage = document.getElementById('error-message');
+        const iMessage = = document.getElementById('info-message');
+        let v = true;
+        
+        let fn = document.forms["cForm"]["fname"].value;
+        if(fn == "") {
+          eMessage.textContent = 'Invalid first name';
+          v = false;
+        }
+
+        let ln = document.forms["cForm"]["lname"].value;
+        if(ln == "") {
+          eMessage.textContent = 'Invalid last name';
+          v = false;
+        }
+
+        let e = document.forms["cForm"]["email"].value;
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(e == "" || pattern.test(e)) {
+          eMessage.textContent = 'Invalid email';
+          v = false;
+        }
+
+        let m = document.forms["cForm"]["message"].value;
+        if(m == "") {
+          eMessage.textContent = 'Message required';
+          v = false;
+        }
+
+        if(v == true) {
+          iMessage.textContent = 'Successfully submitted';
+        }
+      }
+    </script>
   </body>
 </html>
