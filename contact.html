@@ -155,6 +155,17 @@
         if(m.value.length < 10 || m.value.length > 200) {
           errors.push("Invalid message. Must be at least 10 characters and under 200.");
         }
+
+        m.addEventListener("input", (event) => {
+          const cl = this.value.length;
+          const r = 200 - cl;
+          document.getElementById("info-message").innerText = `${r} remaining char(s)`;
+          
+          if (r <= 10) {
+            document.getElementById("info-message").style.color = "red";
+          } 
+        });
+        
         if(errors.length > 0) {
           document.getElementById("error-message").innerText = "There were errors: " + errors.join(", ");
           return false;
@@ -162,7 +173,7 @@
         return true;
       }
 
-      document.getElementById("message").addEventListener("input", (event) => {
+      /*document.getElementById("message").addEventListener("input", (event) => {
         const ml = this.getAttribute("maxlength");
         const cl = this.value.length;
         const r = ml - cl;
@@ -175,7 +186,7 @@
         if(r <= 10) {
           document.getElementById("info-message").style.color = "orange";
         }
-      });
+      });*/
     </script>
   </body>
 </html>
