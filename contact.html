@@ -133,7 +133,7 @@
     </footer>
     <script>
       function formCheck() {
-        document.getElementbyId('submit_btn').addEventListener('click', function(event) {
+        document.querySelector('form').addEventListener('submit', function(event) {
           event.preventDefault();
           const eMessage = document.getElementById('error-message');
           const iMessage = document.getElementById('info-message');
