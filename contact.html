@@ -126,6 +126,7 @@
         <button type="submit" id="submit_btn">Send</button>
       </form>
       <output id="error-message"></output>
+      <br>
       <output id="info-message"></output>
     </section>
     <footer>
@@ -155,16 +156,6 @@
         if(m.value.length < 10 || m.value.length > 200) {
           errors.push("Invalid message. Must be at least 10 characters and under 200.");
         }
-
-        /*m.addEventListener("input", () => {
-          const c = m.value.length;
-          const r = 200 - c;
-          document.getElementById("info-message").innerText = `${r} remaining char(s)`;
-          
-          if (r <= 10) {
-            document.getElementById("info-message").style.color = "red";
-          } 
-        });*/
         
         if(errors.length > 0) {
           document.getElementById("error-message").innerText = "There were errors: " + errors.join(", ");
@@ -179,11 +170,11 @@
         var r = 200 - c;
         document.getElementById("info-message").innerText = `${r} remaining char(s)`;
 
-        if(r <= 20) {
-          document.getElementById("info-message").style.color = "orange";
+        if(r <= 50) {
+          document.getElementById("info-message").style.color = "yellow";
         }
 
-        if(r <= 10) {
+        if(r <= 20) {
           document.getElementById("info-message").style.color = "red";
         }
       });
