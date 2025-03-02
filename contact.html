@@ -119,7 +119,7 @@
         <br>
         <br>
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required>Write Here</textarea>
+        <textarea id="message" name="message" maxlength="200" required>Write Here</textarea>
         <br>
         <br>
         <input type="hidden" name="possible_bot" value="true">
@@ -142,33 +142,33 @@
           const m = document.getElementById("message");
 
           if (fn.value == "") {
-            error.push("Invalid first name.");
+            errors.push("Invalid first name.");
           }
 
           if (ln.value == "") {
-            error.push("Invalid last name.");
+            errors.push("Invalid last name.");
           }
 
           const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if(e.value == "" || !pattern.test(e.value)) {
-            error.push("Invalid email.");
+            errors.push("Invalid email.");
           }
 
           if(m.value.length < 10 || m.value.length > 200) {
-            error.push("Invalid message. Must be at least 10 characters and under 200.");
+            errors.push("Invalid message. Must be at least 10 characters and under 200.");
           }
-          if(error.length > 0) {
-            document.getElementById("error-message").innerText = "There were errors: " + errors.map(e => e.message).join(", ");
-            return;
+          if(errors.length > 0) {
+            document.getElementById("error-message").innerText = "There were errors: " + errors.join(", ");
+            return false;
           }
-          this.submit();
+          return true;
         });
 
         document.getElementById("message").addEventListener("input", (event) => {
           const ml = this.getAttribute("maxlength");
           const cl = this.value.length;
           const r = ml - cl;
-          document.getElementById("info-message").innerText = '${r} remaining char(s)';
+          document.getElementById("info-message").innerText = `${r} remaining char(s)`;
 
           if(r <= 20) {
             document.getElementById("info-message").style.color = "orange";
@@ -178,129 +178,6 @@
             document.getElementById("info-message").style.color = "orange";
           }
         });
-        /*const eMessage = document.getElementById('error-message');
-        const iMessage = document.getElementById('info-message');
-        let v = true;
-        
-        const fn = document.getElementById("fname");
-        fn.addEventListener("input", (event) => {
-          if (fn.validity.typeMismatch) {
-            fn.setCustomValidity("Invalid first name.");
-            eMessage.textContent += 'Invalid first name. ';
-            v = false;
-          } else {
-            fn.setCustomValidity("");
-          }
-        });
-
-        const ln = document.getElementById("lname");
-        ln.addEventListener("input", (event) => {
-          if (ln.validity.typeMismatch) {
-            ln.setCustomValidity("Invalid last name.");
-            eMessage.textContent += 'Invalid last name. ';
-            v = false;
-          } else {
-            ln.setCustomValidity("");
-          }
-        });
-
-        const e = document.getElementById("email");
-        e.addEventListener("input", (event) => {
-          if (e.validity.typeMismatch) {
-            e.setCustomValidity("Invalid email.");
-            eMessage.textContent += 'Invalid email. ';
-            v = false;
-          } else {
-            e.setCustomValidity("");
-          }
-        });
-
-        if(v == true) {
-          iMessage.textContent = 'Successfully submitted';
-        }
-        
-        /*document.getElementById('submit_btn').addEventListener('click', function(event) {
-          event.preventDefault();
-          let v = true;
-          
-          const fn = document.getElementById("fname");
-          if (!fn.checkValidity()) {
-            document.getElementById("error-message").innerHTML = 'Invalid first name. ';
-            v = false;
-          }
-        
-          const ln = document.getElementById("lname");
-          if (!ln.checkValidity()) {
-            document.getElementById("error-message").innerHTML = 'Invalid last name. ';
-            v = false;
-          }
-
-          const e = document.getElementById("email");
-          if (!e.checkValidity()) {
-            document.getElementById("error-message").innerHTML = 'Invalid email. ';
-            v = false;
-          }
-
-          if(v == true) {
-            document.getElementById("info-message").innerHTML = 'Successfully submitted';
-          }
-        }); */
-        
-        /*document.getElementById('submit_btn').addEventListener('click', function(event) {
-          event.preventDefault();
-          const eMessage = document.getElementById('error-message');
-          const iMessage = document.getElementById('info-message');
-          let v = true;
-        
-          let fn = document.forms["cForm"]["fname"].value;
-          if(fn == "") {
-            eMessage.textContent += 'Invalid first name. ';
-            v = false;
-          }
-
-          let ln = document.forms["cForm"]["lname"].value;
-          if(ln == "") {
-            eMessage.textContent += 'Invalid last name. ';
-            v = false;
-          }
-
-          let e = document.forms["cForm"]["email"].value;
-          const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if(e == "" || !pattern.test(e)) {
-            eMessage.textContent += 'Invalid email. ';
-            v = false;
-          }
-
-          if(v == true) {
-            iMessage.textContent = 'Successfully submitted';
-          }
-        });
-        /*const eMessage = document.getElementById('error-message');
-        const iMessage = document.getElementById('info-message');
-        let v = true;
-        
-        let fn = document.forms["cForm"]["fname"].value;
-        if(fn == "") {
-          eMessage.textContent += 'Invalid first name. ';
-          v = false;
-        }
-
-        let ln = document.forms["cForm"]["lname"].value;
-        if(ln == "") {
-          eMessage.textContent += 'Invalid last name. ';
-          v = false;
-        }
-
-        let e = document.forms["cForm"]["email"].value;
-        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if(e == "" || !pattern.test(e)) {
-          eMessage.textContent += 'Invalid email. ';
-          v = false;
-        }
-
-        if(v == true) {
-          iMessage.textContent = 'Successfully submitted';
-        }*/
       }
     </script>
   </body>
