@@ -156,9 +156,9 @@
           errors.push("Invalid message. Must be at least 10 characters and under 200.");
         }
 
-        m.addEventListener("input", (event) => {
-          const cl = this.value.length;
-          const r = 200 - cl;
+        m.addEventListener("input", () => {
+          const c = m.value.length;
+          const r = 200 - c;
           document.getElementById("info-message").innerText = `${r} remaining char(s)`;
           
           if (r <= 10) {
