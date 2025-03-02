@@ -134,6 +134,7 @@
     <script>
       function formCheck() {
         document.getElementbyId('submit_btn').addEventListener('click', function(event) {
+          event.preventDefault();
           const eMessage = document.getElementById('error-message');
           const iMessage = document.getElementById('info-message');
           let v = true;
