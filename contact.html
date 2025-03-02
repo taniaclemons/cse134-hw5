@@ -140,16 +140,16 @@
         const m = document.getElementById("message");
 
         if (fn.value == "") {
-          errors.push("Invalid first name.");
+          errors.push("Invalid first name");
         }
 
         if (ln.value == "") {
-          errors.push("Invalid last name.");
+          errors.push("Invalid last name");
         }
 
         const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if(e.value == "" || !pattern.test(e.value)) {
-          errors.push("Invalid email.");
+          errors.push("Invalid email");
         }
 
         if(m.value.length < 10 || m.value.length > 200) {
