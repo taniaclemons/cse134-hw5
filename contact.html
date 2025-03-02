@@ -133,7 +133,52 @@
     </footer>
     <script>
       function formCheck() {
-        const eMessage = document.getElementById('error-message');
+        document.getElementById("cForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          const errors = [];
+          const fn = document.getElementById("fname");
+          const ln = document.getElementById("lname");
+          const e = document.getElementById("email");
+          const m = document.getElementById("message");
+
+          if (fn.value == "") {
+            error.push("Invalid first name.");
+          }
+
+          if (ln.value == "") {
+            error.push("Invalid last name.");
+          }
+
+          const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if(e.value == "" || !pattern.test(e.value)) {
+            error.push("Invalid email.");
+          }
+
+          if(m.value.length < 10 || m.value.length > 200) {
+            error.push("Invalid message. Must be at least 10 characters and under 200.");
+          }
+          if(error.length > 0) {
+            document.getElementById("error-message").innerText = "There were errors: " + errors.map(e => e.message).join(", ");
+            return;
+          }
+          this.submit();
+        });
+
+        document.getElementById("message").addEventListener("input", (event) => {
+          const ml = this.getAttribute("maxlength");
+          const cl = this.value.length;
+          const r = ml - cl;
+          document.getElementById("info-message").innerText = '${r} remaining char(s)';
+
+          if(r <= 20) {
+            document.getElementById("info-message").style.color = "orange";
+          }
+
+          if(r <= 10) {
+            document.getElementById("info-message").style.color = "orange";
+          }
+        });
+        /*const eMessage = document.getElementById('error-message');
         const iMessage = document.getElementById('info-message');
         let v = true;
         
