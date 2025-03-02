@@ -133,7 +133,48 @@
     </footer>
     <script>
       function formCheck() {
-        document.getElementById('submit_btn').addEventListener('click', function(event) {
+        const eMessage = document.getElementById('error-message');
+        const iMessage = document.getElementById('info-message');
+        let v = true;
+        
+        const fn = document.getElementById("fname");
+        fn.addEventListener("input", (event) => {
+          if (fn.validity.typeMismatch) {
+            fn.setCustomValidity("Invalid first name.");
+            eMessage.textContent += 'Invalid first name. ';
+            v = false;
+          } else {
+            fn.setCustomValidity("");
+          }
+        });
+
+        const ln = document.getElementById("lname");
+        ln.addEventListener("input", (event) => {
+          if (ln.validity.typeMismatch) {
+            ln.setCustomValidity("Invalid last name.");
+            eMessage.textContent += 'Invalid last name. ';
+            v = false;
+          } else {
+            ln.setCustomValidity("");
+          }
+        });
+
+        const e = document.getElementById("email");
+        e.addEventListener("input", (event) => {
+          if (e.validity.typeMismatch) {
+            e.setCustomValidity("Invalid email.");
+            eMessage.textContent += 'Invalid email. ';
+            v = false;
+          } else {
+            e.setCustomValidity("");
+          }
+        });
+
+        if(v == true) {
+          iMessage.textContent = 'Successfully submitted';
+        }
+        
+        /*document.getElementById('submit_btn').addEventListener('click', function(event) {
           event.preventDefault();
           let v = true;
           
@@ -158,7 +199,7 @@
           if(v == true) {
             document.getElementById("info-message").innerHTML = 'Successfully submitted';
           }
-        });
+        }); */
         
         /*document.getElementById('submit_btn').addEventListener('click', function(event) {
           event.preventDefault();
