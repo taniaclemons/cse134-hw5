@@ -133,27 +133,32 @@
     </footer>
     <script>
       function formCheck() {
-        const fn = document.getElementById("fname");
-        if (!fn.checkValidity()) {
-          document.getElementById("error-message").innerHTML = 'Invalid first name. ';
-          v = false;
-        }
+        document.getElementById('submit_btn').addEventListener('click', function(event) {
+          event.preventDefault();
+          let v = true;
+          
+          const fn = document.getElementById("fname");
+          if (!fn.checkValidity()) {
+            document.getElementById("error-message").innerHTML = 'Invalid first name. ';
+            v = false;
+          }
         
-        const ln = document.getElementById("lname");
-        if (!ln.checkValidity()) {
-          document.getElementById("error-message").innerHTML = 'Invalid last name. ';
-          v = false;
-        }
+          const ln = document.getElementById("lname");
+          if (!ln.checkValidity()) {
+            document.getElementById("error-message").innerHTML = 'Invalid last name. ';
+            v = false;
+          }
 
-        const e = document.getElementById("email");
-        if (!e.checkValidity()) {
-          document.getElementById("error-message").innerHTML = 'Invalid email. ';
-          v = false;
-        }
+          const e = document.getElementById("email");
+          if (!e.checkValidity()) {
+            document.getElementById("error-message").innerHTML = 'Invalid email. ';
+            v = false;
+          }
 
-        if(v == true) {
-          document.getElementById("info-message").innerHTML = 'Successfully submitted';
-        }
+          if(v == true) {
+            document.getElementById("info-message").innerHTML = 'Successfully submitted';
+          }
+        });
         
         /*document.getElementById('submit_btn').addEventListener('click', function(event) {
           event.preventDefault();
