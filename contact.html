@@ -133,7 +133,29 @@
     </footer>
     <script>
       function formCheck() {
-        document.getElementbyId('submit_btn').addEventListener('click', function(event) {
+        const fn = document.getElementById("fname");
+        if (!fn.checkValidity()) {
+          document.getElementById("error-message").innerHTML = 'Invalid first name. ';
+          v = false;
+        }
+        
+        const ln = document.getElementById("lname");
+        if (!ln.checkValidity()) {
+          document.getElementById("error-message").innerHTML = 'Invalid last name. ';
+          v = false;
+        }
+
+        const e = document.getElementById("email");
+        if (!e.checkValidity()) {
+          document.getElementById("error-message").innerHTML = 'Invalid email. ';
+          v = false;
+        }
+
+        if(v == true) {
+          document.getElementById("info-message").innerHTML = 'Successfully submitted';
+        }
+        
+        /*document.getElementById('submit_btn').addEventListener('click', function(event) {
           event.preventDefault();
           const eMessage = document.getElementById('error-message');
           const iMessage = document.getElementById('info-message');
