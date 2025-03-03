@@ -185,7 +185,7 @@
         }
         
         if(errors.length > 0) {
-          document.getElementById("error-message").innerText = "There were errors: " + errors.join(", ");
+          document.getElementById("error-message").innerText = "Errors: " + errors.join(", ");
           document.getElementById("form-errors").value = JSON.stringify(errors);
           return false;
         }
@@ -211,7 +211,6 @@
         const e = document.getElementById("email");
         const p = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const eMessage = document.getElementById("error-message")
-        /*e.value = e.value.replace(/[^a-zA-Z0-9@._-]/g, "");*/
         if (!p.test(e.value)) {
           e.value = e.value.replace(/[^a-zA-Z0-9@._-]/g, "");
           e.classList.add("flash");
