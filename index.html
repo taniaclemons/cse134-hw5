@@ -143,43 +143,6 @@
     <footer>
       <p>Last Updated: 2025</p>
     </footer>
-    <script>
-      //window.onload = function() {savedTheme()};
-      //window.addEventListener('load', savedTheme);
-      window.addEventListener('DOMContentLoaded', savedTheme);
-      
-      function savedTheme() {
-        const savedTheme = localStorage.getItem('theme') || 'light-mode';
-        setTheme(savedTheme);
-      }
-      
-      function setTheme(theme) {
-        var element = document.body;
-        element.classList.toggle('dark-mode', theme == 'dark-mode');
-        document.getElementById('theme').textContent = theme === 'dark-mode' ? '☀️' : '🌙';
-
-        //if (theme == 'dark-mode') {
-        //  document.getElementById('theme').textContent = 'Light Mode';
-        //  localStorage.setItem('theme', 'dark-mode');
-        //} else {
-        //  document.getElementById('theme').textContent = 'Dark Mode';
-        //  localStorage.setItem('theme', 'light-mode');
-        //}
-      }
-      
-      function toggleTheme() {
-        const currTheme = localStorage.getItem('theme') || 'light-mode';
-        const newTheme = currTheme == 'light-mode'? 'dark-mode': 'light-mode';
-        localStorage.setItem('theme', newTheme);
-        setTheme(newTheme);
-        //document.getElementById('theme').textContent = 'Light Mode';
-        
-        //if (savedTheme === 'dark') {
-          //element.classList.add('dark-mode');
-          //document.getElementById('theme').textContent = 'Light Mode';
-        //}
-      }
-      document.addEventListener('DOMContentLoaded', setSavedTheme);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
