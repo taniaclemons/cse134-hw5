@@ -182,6 +182,12 @@
       document.getElementById("email").addEventListener("input", () => {
         const e = document.getElementById("email");
         e.value = e.value.replace(/[^a-zA-Z0-9@._-]/g, "");
+        if (!p.test(e.value)) {
+          e.classList.add("flash");
+          setTimeout(() => {
+            e.classList.remove("flash");
+          }, 500);
+        }
       });
     </script>
   </body>
