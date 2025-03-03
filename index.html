@@ -98,7 +98,7 @@
   </head>
   <body>
     <header>
-      <button id="theme" onclick="toggleTheme()">Dark Mode</button>
+      <button id="theme" onclick="toggleTheme()">🌙</button>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -149,7 +149,7 @@
       function setTheme(theme) {
         var element = document.body;
         element.classList.toggle('dark-mode', theme == 'dark-mode');
-        document.getElementById('theme').textContent = theme === 'dark-mode' ? 'Light Mode' : 'Dark Mode';
+        document.getElementById('theme').textContent = theme === 'dark-mode' ? '☀️' : '🌙';
 
         //if (theme == 'dark-mode') {
         //  document.getElementById('theme').textContent = 'Light Mode';
