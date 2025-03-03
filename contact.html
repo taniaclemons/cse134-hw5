@@ -179,12 +179,9 @@
         }
       });
 
-      document.getElementById("fname").addEventListener("input", () => {
-        const fname = document.getElementById("fname");
-        const p = /^[a-zA-Z\s]*$/;
-        if (!p.test(fname.value)) {
-          fname.value = fname.value.replace(p, "");
-        }
+      document.getElementById("email").addEventListener("input", () => {
+        const e = document.getElementById("message");
+        e.value = e.value.replace(/[^a-zA-Z0-9@._-]/g, "");
       });
     </script>
   </body>
