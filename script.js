@@ -8,7 +8,7 @@ function savedTheme() {
 function setTheme(theme) {
   var element = document.body;
   element.classList.toggle('dark-mode', theme == 'dark-mode');
-  document.getElementById('theme').textContent = theme === 'dark-mode' ? 'Light Mode' : 'Dark Mode';
+  document.getElementById('theme').textContent = theme === 'dark-mode' ? '☀️' : '🌙';
 }
       
   function toggleTheme() {
