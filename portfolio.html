@@ -155,7 +155,7 @@
         <p>Would you like to:</p>
         <ul>
           <li><a href="prog.html" class="button">Go to In Progress</a></li>
-          <li><a href="portfolio.html" class="button">Stay on this page</a></li>
+          <li><a href="portfolio.html" class="button" id="stay">Stay on this page</a></li>
         </ul>
       </no-proj-alert>
     </section>
@@ -171,5 +171,12 @@
       <p>Last Updated: 2025</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+      document.getElementById("stay").addEventListener('click', (event) {
+        event.preventDefault();
+        const noProj = document.querySelector('no-proj-alert');
+        noProj.style.display = 'none';
+      });
+    </script>
   </body>
 </html>
