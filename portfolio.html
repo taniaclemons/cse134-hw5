@@ -147,7 +147,7 @@
     </header>
     <section>
       <h1>Portfolio</h1>
-      <no-proj-alert>
+      <no-proj-alert id="noProj">
         <h3>Uh Oh</h3>
         <p>There are no projects currently available</p>
         <blockquote>"What else was there to do? Keep moving and improving."</blockquote>
@@ -174,7 +174,7 @@
     <script>
       document.getElementById("stay").addEventListener('click', (event) {
         event.preventDefault();
-        const noProj = document.querySelector('no-proj-alert');
+        const noProj = document.getElementById('noProj');
         noProj.style.display = 'none';
       });
     </script>
