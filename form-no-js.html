@@ -5,8 +5,118 @@
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0"/>
     <title>Contact Me</title>
+    <style>
+      body {
+        background-color: white;
+        color: black;
+      }
+      html, body {
+        min-height: 100%;
+        margin: 0px;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+      }
+      header button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        transition: color 0.3s ease;
+        position: absolute; 
+        top: 10px; 
+        right: 20px;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      nav ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px 15px;
+      }
+      nav a.active {
+        color: grey;
+        font-weight:bold;
+      }
+      nav a:hover {
+        color: #ff6347;
+      }
+      section {
+        text-align: center;
+        padding: 2rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 2rem;
+        border: 1px solid black;
+      }
+      form label {
+        display: block; 
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: left;
+        margin-right: 10px;
+      }
+      form input, form textarea {
+        display: block; 
+        width: 80%; 
+        align-items: center;
+        padding: 0.5rem; 
+        margin-left: auto;
+        margin-right: auto;
+      }
+      form button {
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        nav a {
+          font-size: 1.2rem;
+          padding: 15px 20px;
+        }
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="prog.html">In Progress</a></li>
+          <li><a href="contact.html" class="active">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
     <section>
       <h1>Contact Me</h1>
       <form name="cForm" action="https://httpbin.org/post" method="post">
@@ -23,11 +133,18 @@
         <br>
         <br>
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required>Write Here</textarea>
+        <textarea id="message" name="message" maxlength="200" required>Write Here</textarea>
         <br>
         <br>
         <input type="hidden" name="possible_bot" value="true">
-        <button type="submit">Send</button>
+        <button type="submit" id="submit_btn">Send</button>
       </form>
+      <output id="error-message"></output>
+      <br>
+      <output id="info-message"></output>
     </section>
+    <footer>
+      <p>Last Updated: 2025</p>
+    </footer>
   </body>
+</html>
