@@ -148,6 +148,7 @@
         <br>
         <br>
         <input type="hidden" name="possible_bot" value="true">
+        <input type="hidden" name="form-errors" id="form-errors">
         <button type="submit" id="submit_btn">Send</button>
       </form>
       <output id="error-message"></output>
@@ -185,6 +186,7 @@
         
         if(errors.length > 0) {
           document.getElementById("error-message").innerText = "There were errors: " + errors.join(", ");
+          document.getElementById("form-errors").value = JSON.stringify(errors);
           return false;
         }
         return true;
