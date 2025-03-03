@@ -184,6 +184,7 @@
 
       document.getElementById("email").addEventListener("input", () => {
         const e = document.getElementById("email");
+        const p = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         /*e.value = e.value.replace(/[^a-zA-Z0-9@._-]/g, "");*/
         if (!p.test(e.value)) {
           e.value = e.value.replace(/[^a-zA-Z0-9@._-]/g, "");
