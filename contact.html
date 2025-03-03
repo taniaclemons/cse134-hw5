@@ -74,6 +74,10 @@
       #email.flash {
         background-color: #ff6347;
       }
+      #error-message.fade-out {
+        opacity: 0;
+        transition: opacity 2s ease-out;
+      }
       form button {
         background-color: #ff6347;
         color: white;
@@ -185,13 +189,19 @@
       document.getElementById("email").addEventListener("input", () => {
         const e = document.getElementById("email");
         const p = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const eMessage = document.getElementById("error-message")
         /*e.value = e.value.replace(/[^a-zA-Z0-9@._-]/g, "");*/
         if (!p.test(e.value)) {
           e.value = e.value.replace(/[^a-zA-Z0-9@._-]/g, "");
           e.classList.add("flash");
+          eMessage.innerText = "Invalid email char.";
+          eMessage.classList.add("fade-out");
           setTimeout(() => {
             e.classList.remove("flash");
           }, 500);
+          setTimeout(() => {
+            eMessage.classList.remove("fade-out");
+          }, 3000);
         }
       });
     </script>
