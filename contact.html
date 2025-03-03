@@ -182,7 +182,7 @@
       document.getElementById("fname").addEventListener("input", () => {
         const fname = document.getElementById("fname");
         const p = /^[a-zA-Z\s]*$/;
-        if (!pattern.test(fname.value)) {
+        if (!p.test(fname.value)) {
           fname.value = fname.value.replace(p, "");
         }
       });
