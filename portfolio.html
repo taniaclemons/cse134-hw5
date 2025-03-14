@@ -166,6 +166,7 @@
         </form>
       </search>
       <p><b>No current projects</b></p>
+      <div id="proj-gallery"></div>
     </main>
     <footer>
       <p>Last Updated: 2025</p>
@@ -177,6 +178,32 @@
         const noProj = document.getElementById('noProj');
         noProj.style.display = 'none';
       });
+    </script>
+    <script>
+      window.addEventListener('DOMContentLoaded', async () => {
+        const url = "";
+        try {
+          const response = await fetch(url);
+          if(!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+          }
+          const jsonData = await response.json();
+          jsonData.portfolio.forEach(project => {
+            console.log(project);
+            window.galleryItem = document.createElement("proj");
+            
+            galleryItem.setAttribute("title", proj.title);
+            galleryItem.setAttribute("img", proj.img);
+            galleryItem.setAttribute("description", proj.description);
+            galleryItem.setAttribute("link", proj.link);
+            
+            document.getElementById("proj-gallery").appendChild(window.galleryItem);
+          });
+        } catch (error) {
+          console.error(error.message);
+        }
+      });
+      
     </script>
   </body>
 </html>
