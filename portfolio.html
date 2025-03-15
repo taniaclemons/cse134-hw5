@@ -167,6 +167,7 @@
       </search>
       <p><b>No current projects</b></p>
       <div id="proj-gallery"></div>
+      <button id="remote">Load Remote</button>
     </main>
     <footer>
       <p>Last Updated: 2025</p>
@@ -180,7 +181,7 @@
       });
     </script>
     <script>
-      window.addEventListener('DOMContentLoaded', async () => {
+      document.getElementById("remote").addEventListener('click', function(event) {
         const url = "";
         try {
           const response = await fetch(url);
