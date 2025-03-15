@@ -4,8 +4,6 @@ class myProject extends HTMLELement {
   }
 
 connectedCallback() {
-  const style = document.createElement('style');
-  style.textContent = getMyComponentCSS();
   const title = this.getAttribute("title") || "Unknown Title";
   const img = this.getAttribute("img") || "Unknown img";
   const description = this.getAttribute("description") || "Unknown Description";
@@ -15,7 +13,7 @@ connectedCallback() {
       <hgroup>
       <h2 class="title">${title}</h2>
       <p class="description">${description}</p>
-      <a class="link">${link}</a>
+      <a href="${link}" class="link">Read More</a>
       </hgroup>
       <img src="${img}" alt="${title}">
     </div>
