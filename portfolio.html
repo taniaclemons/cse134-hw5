@@ -227,7 +227,7 @@
       
       document.getElementById("local").addEventListener('click', function(event) {
         const data = JSON.parse(localStorage.getItem('projects'));
-        data.forEach(project => {
+        data.forEach(proj => {
           console.log(project);
           window.galleryItem = document.createElement("proj");
             
