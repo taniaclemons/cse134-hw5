@@ -166,8 +166,9 @@
         </form>
       </search>
       <p><b>No current projects</b></p>
-      <div id="proj-gallery"></div>
+      <div id="gallery"></div>
       <button id="remote">Load Remote</button>
+      <button id="local">Load Local</button>
     </main>
     <footer>
       <p>Last Updated: 2025</p>
@@ -205,6 +206,22 @@
         }
       });
       
+    </script>
+    <script>
+      document.getElementById("local").addEventListener('click', function(event) {
+        const data = JSON.parse(localStorage.getItem('projects'));
+        data.forEach(project => {
+          console.log(project);
+          window.galleryItem = document.createElement("proj");
+            
+          galleryItem.setAttribute("title", proj.title);
+          galleryItem.setAttribute("img", proj.img);
+          galleryItem.setAttribute("description", proj.description);
+          galleryItem.setAttribute("link", proj.link);
+            
+          document.getElementById("proj-gallery").appendChild(window.galleryItem);
+        });
+      });
     </script>
   </body>
 </html>
