@@ -18,6 +18,7 @@ connectedCallback() {
         width: 300px;
         margin: 1rem;
         background-color: #ff6347;
+        margin-bottom: 20px;
       }
 
       .proj hgroup {
