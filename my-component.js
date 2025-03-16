@@ -46,7 +46,6 @@ connectedCallback() {
         width: 100%;
         height: auto;
         margin-top: 1rem;
-        margin-bottom: 20px;
       }
 
     .proj img {
