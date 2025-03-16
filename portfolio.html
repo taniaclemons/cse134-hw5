@@ -190,10 +190,10 @@
           if(!response.ok) {
             throw new Error(`Response status: ${response.status}`);
           }
-          const jsonData = await response.json();
+          const jsonData = response.json();
           jsonData.portfolio.forEach(project => {
             console.log(project);
-            window.galleryItem = document.createElement("proj");
+            window.galleryItem = document.createElement("my-proj");
             
             galleryItem.setAttribute("title", proj.title);
             galleryItem.setAttribute("img", proj.img);
@@ -233,13 +233,9 @@
           const card = document.createElement("proj");
             
           card.setAttribute("title", proj.title);
-          card.querySelector("h2").textContent = proj.title;
           card.setAttribute("img", proj.img);
-          card.querySelector("img").src = proj.img;
           card.setAttribute("description", proj.description);
-          card.querySelector("p").textContent = proj.description;
           card.setAttribute("link", proj.link);
-          card.querySelector("a").href = proj.link;
             
           document.getElementById("gallery").appendChild(card);
         });
