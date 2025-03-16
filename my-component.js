@@ -20,7 +20,7 @@ connectedCallback() {
         width: 300px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 1rem;
-        background-color: #fff;
+        background-color: #ff6347;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
