@@ -46,13 +46,13 @@ connectedCallback() {
         width: 100%;
         height: auto;
         margin-top: 1rem;
+        margin-bottom: 20px;
       }
 
     .proj img {
         width: 100%;
         height: auto;
         border-radius: 8px;
-        margin-bottom: 20px;
       }
     </style>
     <div class="proj">
