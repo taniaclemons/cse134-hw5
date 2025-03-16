@@ -35,13 +35,9 @@ connectedCallback() {
       }
 
     .proj .link {
-        color: #007BFF;
+        color: #333;
         text-decoration: none;
         font-weight: bold;
-      }
-
-    .proj .link:hover {
-        color: #0056b3;
       }
 
     .proj picture {
