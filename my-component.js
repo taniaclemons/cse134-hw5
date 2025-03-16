@@ -36,7 +36,6 @@ connectedCallback() {
       }
 
     .proj .link {
-        color: #333;
         text-decoration: none;
         font-weight: bold;
       }
