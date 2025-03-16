@@ -212,13 +212,13 @@
       const projectData = [
   {
     title: "Project 1",
-    imageUrl: "https://via.placeholder.com/300",
+    img: "https://via.placeholder.com/300",
     description: "Short description of project 1",
     link: "https://example.com/project1"
   },
   {
     title: "Project 2",
-    imageUrl: "https://via.placeholder.com/300",
+    img: "https://via.placeholder.com/300",
     description: "Short description of project 2",
     link: "https://example.com/project2"
   }
@@ -230,7 +230,7 @@
         const data = JSON.parse(localStorage.getItem('projects'));
         data.forEach(proj => {
           console.log(proj);
-          const card = document.createElement("proj");
+          const card = document.createElement("my-proj");
             
           card.setAttribute("title", proj.title);
           card.setAttribute("img", proj.img);
