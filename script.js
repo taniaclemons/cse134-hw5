@@ -18,4 +18,4 @@ function setTheme(theme) {
     setTheme(newTheme);
 }
 
-  document.addEventListener('DOMContentLoaded', setSavedTheme);
+  document.addEventListener('DOMContentLoaded', savedTheme);
