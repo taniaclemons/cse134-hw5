@@ -1,4 +1,4 @@
-class myProject extends HTMLELement {
+class myProject extends HTMLElement {
   constructor() {
     super();
   }
