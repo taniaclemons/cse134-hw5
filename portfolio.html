@@ -229,18 +229,18 @@
         const data = JSON.parse(localStorage.getItem('projects'));
         data.forEach(proj => {
           console.log(proj);
-          window.galleryItem = document.createElement("proj");
+          const card = document.createElement("proj");
             
-          galleryItem.setAttribute("title", proj.title);
-          galleryItem.querySelector("h2").textContent = proj.title;
-          galleryItem.setAttribute("img", proj.img);
-          galleryItem.querySelector("img").src = proj.img;
-          galleryItem.setAttribute("description", proj.description);
-          galleryItem.querySelector("p").textContent = proj.description;
-          galleryItem.setAttribute("link", proj.link);
-          galleryItem.querySelector("a").href = proj.link;
+          card.setAttribute("title", proj.title);
+          card.querySelector("h2").textContent = proj.title;
+          card.setAttribute("img", proj.img);
+          card.querySelector("img").src = proj.img;
+          card.setAttribute("description", proj.description);
+          card.querySelector("p").textContent = proj.description;
+          card.setAttribute("link", proj.link);
+          card.querySelector("a").href = proj.link;
             
-          document.getElementById("gallery").appendChild(window.galleryItem);
+          document.getElementById("gallery").appendChild(card);
         });
       });
     </script>
