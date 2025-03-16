@@ -191,16 +191,16 @@
             throw new Error(`Response status: ${response.status}`);
           }
           const jsonData = response.json();
-          jsonData.portfolio.forEach(project => {
-            console.log(project);
-            window.galleryItem = document.createElement("my-proj");
+          jsonData.portfolio.forEach(proj => {
+            console.log(proj);
+            const card = document.createElement("my-proj");
             
-            galleryItem.setAttribute("title", proj.title);
-            galleryItem.setAttribute("img", proj.img);
-            galleryItem.setAttribute("description", proj.description);
-            galleryItem.setAttribute("link", proj.link);
+            card.setAttribute("title", proj.title);
+            card.setAttribute("img", proj.img);
+            card.setAttribute("description", proj.description);
+            card.setAttribute("link", proj.link);
             
-            document.getElementById("proj-gallery").appendChild(window.galleryItem);
+            document.getElementById("gallery").appendChild(card);
           });
         } catch (error) {
           console.error(error.message);
