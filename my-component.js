@@ -27,6 +27,7 @@ connectedCallback() {
       .proj .title {
         font-size: 1.5rem;
         font-weight: bold;
+        text-align: center;
       }
 
       .proj .description {
