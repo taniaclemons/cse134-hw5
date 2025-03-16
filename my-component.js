@@ -14,19 +14,10 @@ connectedCallback() {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border: 1px solid #ddd;
-        border-radius: 8px;
         padding: 1rem;
         width: 300px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 1rem;
         background-color: #ff6347;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .proj:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
       }
 
       .proj hgroup {
@@ -36,13 +27,10 @@ connectedCallback() {
       .proj .title {
         font-size: 1.5rem;
         font-weight: bold;
-        margin: 0;
-        color: #333;
       }
 
       .proj .description {
         font-size: 1rem;
-        color: #666;
         margin: 0.5rem 0;
       }
 
