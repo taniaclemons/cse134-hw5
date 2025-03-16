@@ -233,6 +233,7 @@
           const card = document.createElement("proj");
             
           card.setAttribute("title", proj.title);
+          card.shadowRoot.querySelector('h2').textContent = proj.title;
           card.setAttribute("img", proj.img);
           card.setAttribute("description", proj.description);
           card.setAttribute("link", proj.link);
