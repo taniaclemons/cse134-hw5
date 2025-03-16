@@ -18,7 +18,6 @@ connectedCallback() {
         width: 300px;
         margin: 1rem;
         background-color: #ff6347;
-        margin-bottom: 20px;
       }
 
       .proj hgroup {
@@ -53,6 +52,7 @@ connectedCallback() {
         width: 100%;
         height: auto;
         border-radius: 8px;
+        margin-bottom: 20px;
       }
     </style>
     <div class="proj">
