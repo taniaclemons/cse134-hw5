@@ -191,7 +191,7 @@
             throw new Error(`Response status: ${response.status}`);
           }
           const jsonData = await response.json();
-          jsonData.portfolio.forEach(proj => {
+          jsonData.record.portfolio.forEach(proj => {
             console.log(proj);
             const card = document.createElement("my-proj");
             
