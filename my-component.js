@@ -38,6 +38,7 @@ connectedCallback() {
     .proj .link {
         text-decoration: none;
         font-weight: bold;
+        text-align: center;
       }
 
     .proj picture {
