@@ -21,4 +21,4 @@ connectedCallback() {
   }
 }
 console.log("custom element defined");
-customElements.define('proj', myProject);
+customElements.define('my-proj', myProject);
