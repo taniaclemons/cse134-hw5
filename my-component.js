@@ -10,7 +10,7 @@ connectedCallback() {
   const link = this.getAttribute("link") || "Unknown Link";
   this.innerHTML = `
     <style> 
-      .proj {
+      #proj {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -20,22 +20,22 @@ connectedCallback() {
         background-color: #ff6347;
       }
 
-      .proj hgroup {
+      #proj hgroup {
         margin-bottom: 1rem;
       }
 
-      .proj .title {
+      #title {
         font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
       }
 
-      .proj .description {
+      #description {
         font-size: 1rem;
         margin: 0.5rem 0;
       }
 
-    .proj .link {
+    #link {
         text-decoration: none;
         font-weight: bold;
         display: block;
